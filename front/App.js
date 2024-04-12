@@ -10,19 +10,14 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import AuthHomeScreen from './src/screens/AuthHomeScreen';
+import AuthStackNavigator from './src/screens/navigation/AuthStackNavigator';
 
 function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.inputContainer}>
-        <TextInput style={styles.input}/>
-        <Text>텍스트</Text>
-      </View>
-      <View style={styles.inputContainer}>
-        <TextInput style={styles.input}/>
-        <Text>텍스트</Text>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <AuthStackNavigator/>
+    </NavigationContainer>
   );
 }
 
